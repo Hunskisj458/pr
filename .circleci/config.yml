@@ -37,7 +37,7 @@ jobs:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: |
-            pip install undetected-chromedriver 
+            /home/circleci/.pyenv/versions/3.8.12/bin/python3.8 -m pip install undetected-chromedriver 
             chromedriver --version
 
 # Invoke jobs via workflows
